@@ -16,6 +16,7 @@ class Aifileupload extends Model
         'ai_details',
         'ai_type',
         'scanable_llm',
+        's3_path',
     ];
 
 

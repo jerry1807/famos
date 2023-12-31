@@ -22,6 +22,8 @@ return new class extends Migration
             $table->string('file_path');
             $table->string('ai_details')->nullable();
             $table->string('ai_type')->nullable();
+            $table->string('s3_path')->nullable();
+
             $table->timestamps();
         });
     }
