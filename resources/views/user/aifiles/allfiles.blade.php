@@ -1,4 +1,4 @@
-	@extends('layouts.app')
+@extends('layouts.app')
 	@section('css')
 		<!-- Sweet Alert CSS -->
 		<link href="{{URL::asset('plugins/sweetalert/sweetalert2.min.css')}}" rel="stylesheet" />
@@ -12,7 +12,6 @@
 
 	@section('content')
 	<div class="card border-0">	
-						
 					
 				</div>
 			
@@ -22,57 +21,17 @@
 			<div class="row justify-content-center">
 				<div class="col-md-8">
 					<div class="card">
-						<div class="card-header"> <h2 class="card-title">{{ __('AI File Upload') }}</h2></div>
+						<div class="card-header"> <h2 class="card-title">{{ __('All Files') }}</h2></div>
 						<div class="card-body">
-							<form action="{{ route('aifiles.upload') }}" method="POST" enctype="multipart/form-data">
-								@csrf
-								<div class="form-group">
-								<h6 class="fs-11 mb-2 font-weight-semibold">{{ __('Name:') }} <span class="text-muted">({{ __('Optional') }})</span></h6>
-									<input type="text" class="form-control" id="name" name="name" required>
-								</div>
-								<br>
-								<div class="form-group">
-								<h6 class="fs-11 mb-2 font-weight-semibold">{{ __('Choose File:') }} <span class="text-muted">({{ __('Optional') }})</span></h6>
-									<input type="file" class="form-control" id="file" name="file" required>
-								</div>
-								<br>
-								<!-- Radio Button -->
-								<div class="form-group">
-								<h6 class="fs-11 mb-2 font-weight-semibold">{{ __('Scannable by AI:') }} <span class="text-muted">({{ __('Optional') }})</span></h6>
-									<div class="form-check">
-										<input type="radio" class="form-check-input" id="ai_yes" name="scannable_by_ai" value="yes">
-										<label class="form-check-label" for="ai_yes">Yes</label>
-									</div>
-									<div class="form-check">
-										<input type="radio" class="form-check-input" id="ai_no" name="scannable_by_ai" value="no">
-										<label class="form-check-label" for="ai_no">No</label>
-									</div>
-								</div>
-								<!-- Text Area -->
-								<div class="form-group">
-								<h6 class="fs-11 mb-2 font-weight-semibold">{{ __('Describe the uploaded File') }} <span class="text-muted">({{ __('Optional') }})</span></h6>
-
-									<textarea class="form-control" id="description" name="description" rows="4"></textarea>
-								</div>
-								<br>
-								<div class="form-group">
-									<div class="form-group mt-5">
-										<h6 class="fs-11 mb-2 font-weight-semibold">{{ __('Workbook') }} <span class="text-muted">({{ __('Optional') }})</span></h6>
-										<select id="project" name="project" class="form-select" data-placeholder="{{ __('Select Workbook Name') }}">	
-											<option value="all"> {{ __('All Workbooks') }}</option>
-										</select>
-									</div>								
-								</div>
-								<br><br>
-								<div class="form-group">
-									<button type="submit" class="btn btn-primary">Upload</button>
-								</div>
-
-								
-
-
-							</form>
-						</div>
+                        <ul>
+                            @foreach ($files as $file)
+                                <li>
+                                    <p>{{ $file->name }}</p>
+                                    <a href="{{ Storage::disk('s3')->url($file->file_path) }}" target="_blank">View File</a>
+                                </li>
+                            @endforeach
+                        </ul>
+                        </div>
 					</div>
 				</div>
 			</div>

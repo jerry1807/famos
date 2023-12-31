@@ -82,6 +82,7 @@ use App\Http\Controllers\AiWebChatController;
 use App\Http\Controllers\FacebookPageController;
 use App\Http\Controllers\InstagramPageController;
 use App\Http\Controllers\AiFilesController;
+use App\Http\Controllers\AllFilesController;
 use App\Services\StripeService;
 use Illuminate\Support\Facades\Artisan;
 
@@ -97,6 +98,7 @@ use Illuminate\Support\Facades\Artisan;
 
 Route::get('/aifiles/index', [AiFilesController::class, 'index'])->name('user.aifiles');
 Route::post('/aifiles/upload', [AiFilesController::class, 'uploadFile'])->name('aifiles.upload');
+Route::get('/allfiles', [AllFilesController::class, 'index'])->name('user.allfiles');
 
 
 
@@ -159,24 +161,10 @@ Route::get('/facebook/callback', [FacebookPageController::class, 'handleFacebook
 
 
 Route::get('/myintegations', [MyintegationsController::class, 'index'])->name('user.myintegations');
-
-
 Route::get('/aidash', [AidashController::class, 'index'])->name('aidash');
-
 Route::get('/social-scheduler', [PostSchedulerController::class, 'index'])->name('user.postscheduler.index');
-
-
-
-
 Route::get('/connections', [ConnectionsController::class, 'index'])->name('user.connections.index');
 Route::get('/communications', [CommunicationsController::class, 'index'])->name('user.communications.index');
-
-
-
-
-
-
-
 Route::get('/chat/aimedchat', [AimedChatController::class, 'index'])->name('user.aimedchat');
 
 //AIWEBCHAT

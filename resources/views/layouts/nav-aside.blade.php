@@ -151,11 +151,11 @@
                     <li><a href="{{ route('user.aifiles') }}" class="slide-item">{{ __('Add files') }}</a></li>
                     @role('user|subscriber')
                         @if (config('settings.image_feature_user') == 'allow')
-                            <li><a href="{{ route('user.documents.images') }}" class="slide-item">{{ __('Manage files') }}</a></li> 
+                            <li><a href="{{ route('user.allfiles') }}" class="slide-item">{{ __('Manage files') }}</a></li> 
                         @endif 
                     @endrole
                     @role('admin')
-                        <li><a href="{{ route('user.documents') }}" class="slide-item">{{ __('Manage files') }}</a></li>
+                        <li><a href="{{ route('user.allfiles') }}" class="slide-item">{{ __('Manage files') }}</a></li>
                     @endrole
                 
                 
