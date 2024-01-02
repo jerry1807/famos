@@ -157,6 +157,15 @@
                     @role('admin')
                         <li><a href="{{ route('user.allfiles') }}" class="slide-item">{{ __('Manage files') }}</a></li>
                     @endrole
+
+                    @role('user|subscriber')
+                        @if (config('settings.image_feature_user') == 'allow')
+                            <li><a href="#" class="slide-item">{{ __('AI Profile') }}</a></li> 
+                        @endif 
+                    @endrole
+                    @role('admin')
+                        <li><a href="#" class="slide-item">{{ __('AI Profile') }}</a></li>
+                    @endrole
                 
                 
                 
