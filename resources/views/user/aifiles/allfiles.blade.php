@@ -25,7 +25,7 @@
                                 <th>File Preview</th>
                                 <th>Name</th>
                                 <th>Description</th>
-                                <th>AI Details</th>
+                                <th>AI Scan</th>
                                 <th>AI Type</th>
                                 <th>Public Url</th>
                             </tr>
