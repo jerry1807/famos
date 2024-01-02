@@ -50,11 +50,9 @@ public function uploadFile(Request $request)
         $aifileupload->file_path = $path;
         $aifileupload->ai_details = $scannableByAI;
         
-        // Set the S3 path without the full URL
-        $aifileupload->s3_path = $s3_path;
         
         // Concatenate the S3 path with the S3 base URL to get the full URL
-        $aifileupload->s3_url = 'https://davinci-famos.s3.amazonaws.com/' . $s3_path;
+        $aifileupload->s3_path = 'https://davinci-famos.s3.amazonaws.com/' . $path;
         
         $aifileupload->user_id = auth()->user()->id; // Assuming you want to associate the upload with the logged-in user
         $aifileupload->save();
