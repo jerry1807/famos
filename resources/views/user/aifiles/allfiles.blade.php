@@ -23,7 +23,6 @@
                         <thead>
                             <tr>
                                 <th>File Preview</th>
-                                <th>Image</th>
                                 <th>Name</th>
                                 <th>Description</th>
                                 <th>AI Details</th>
