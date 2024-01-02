@@ -55,14 +55,7 @@
 									<textarea class="form-control" id="description" name="description" rows="4"></textarea>
 								</div>
 								<br>
-								<div class="form-group">
-									<div class="form-group mt-5">
-										<h6 class="fs-11 mb-2 font-weight-semibold">{{ __('Workbook') }} <span class="text-muted">({{ __('Optional') }})</span></h6>
-										<select id="project" name="project" class="form-select" data-placeholder="{{ __('Select Workbook Name') }}">	
-											<option value="all"> {{ __('All Workbooks') }}</option>
-										</select>
-									</div>								
-								</div>
+								
 								<br><br>
 								<div class="form-group">
 									<button type="submit" class="btn btn-primary">Upload</button>
