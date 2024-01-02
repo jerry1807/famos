@@ -27,7 +27,7 @@
                                 <th>Description</th>
                                 <th>AI Details</th>
                                 <th>AI Type</th>
-                                <th>S3 Path</th>
+                                <th>Public Url</th>
                             </tr>
                         </thead>
                         <tbody>
