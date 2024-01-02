@@ -36,7 +36,7 @@
                                 <tr>
                                     <td>{{ $file->table_name }}</td>
                                     <td>
-										<img src="{{ Storage::disk('s3')->url($file->file_path) }}" alt="{{ $file->name }}" width="100">
+										<img src="{{ Storage::disk('s3')->url($file->s3_path) }}" alt="{{ $file->name }}" width="100">
                                     </td>
                                     <td>{{ $file->name }}</td>
                                     <td>{{ $file->description }}</td>
