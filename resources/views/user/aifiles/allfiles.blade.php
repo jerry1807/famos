@@ -22,7 +22,7 @@
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th>Table Name</th>
+                                <th>File Name</th>
                                 <th>Image</th>
                                 <th>Name</th>
                                 <th>Description</th>
@@ -34,7 +34,6 @@
                         <tbody>
                             @foreach ($files as $file)
                                 <tr>
-                                    <td>{{ $file->table_name }}</td>
                                     <td>
 										<img src="{{ $file->s3_path }}" alt="{{ $file->name }}" width="100">
                                     </td>
