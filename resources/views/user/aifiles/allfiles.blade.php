@@ -41,7 +41,7 @@
                                     <td>{{ $file->ai_details }}</td>
                                     <td>{{ $file->ai_type }}</td>
                                     <td>
-									<h4 href="{{ $file->s3_path }}"> View Url</h4>
+									<a href="{{ $file->s3_path }}" target="_blank"><button>View Url</button></a>
 		
 									
 								
