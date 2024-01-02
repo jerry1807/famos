@@ -40,7 +40,12 @@
                                     <td>{{ $file->description }}</td>
                                     <td>{{ $file->ai_details }}</td>
                                     <td>{{ $file->ai_type }}</td>
-                                    <td>{{ $file->s3_path }}</td>
+                                    <td>
+									<h4 href="{{ $file->s3_path }}"> View Url</h4>
+		
+									
+								
+								</td>
                                 </tr>
                             @endforeach
                         </tbody>
