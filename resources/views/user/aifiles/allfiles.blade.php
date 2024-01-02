@@ -22,7 +22,7 @@
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th>File Name</th>
+                                <th>File Preview</th>
                                 <th>Image</th>
                                 <th>Name</th>
                                 <th>Description</th>
