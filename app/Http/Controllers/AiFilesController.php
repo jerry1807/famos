@@ -21,7 +21,7 @@ class AiFilesController extends Controller
 public function uploadFile(Request $request)
 {
     $request->validate([
-        'file' => 'required|file|mimes:jpeg,png,pdf,mov,avi,docx|max:10000',
+        'file' => 'required|file|mimes:jpeg,png,pdf,mov,avi,docx,doc|max:10000',
         'scannable_by_ai' => 'required|in:yes,no',
         'description' => 'nullable|string|max:255',
     ]);
