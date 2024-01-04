@@ -25,8 +25,6 @@
 
 
 
-
-
 <div class="container">
     <div class="row">
         <div class="col-md-6">
@@ -34,7 +32,7 @@
                 <h2>About Me</h2>
                 <div class="form-content">
                     <p class="form-text">Enter information about yourself:</p>
-                    <textarea id="about-me-text" class="form-control" rows="4"></textarea>
+                    <textarea id="about-me-text" class="form-control" rows="4">{{ $aboutMeData }}</textarea>
                     <br>
                     <button class="btn btn-primary update-button">Update</button>
                 </div>
@@ -46,7 +44,7 @@
                 <h2>About My Family</h2>
                 <div class="form-content">
                     <p class="form-text">Enter information about your family:</p>
-                    <textarea id="family-text" class="form-control" rows="4"></textarea>
+                    <textarea id="family-text" class="form-control" rows="4">{{ $familyData }}</textarea>
                     <br>
                     <button class="btn btn-primary update-button">Update</button>
                 </div>
@@ -58,7 +56,7 @@
                 <h2>Travel Preferences</h2>
                 <div class="form-content">
                     <p class="form-text">Enter your travel preferences:</p>
-                    <textarea id="travel-preferences-text" class="form-control" rows="4"></textarea>
+                    <textarea id="travel-preferences-text" class="form-control" rows="4">{{ $travelPreferencesData }}</textarea>
                     <br>
                     <button class="btn btn-primary update-button">Update</button>
                 </div>
@@ -69,9 +67,6 @@
 
 
 
-
-
-
 @endsection
 
 @section('js')
@@ -79,5 +74,5 @@
 <script src="{{URL::asset('plugins/pdf/html2canvas.min.js')}}"></script>
 <script src="{{URL::asset('plugins/pdf/jspdf.umd.min.js')}}"></script>
 <script src="{{URL::asset('js/export-chat.js')}}"></script>
-
+<sc>
 @endsection
