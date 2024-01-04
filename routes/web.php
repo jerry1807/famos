@@ -83,6 +83,7 @@ use App\Http\Controllers\FacebookPageController;
 use App\Http\Controllers\InstagramPageController;
 use App\Http\Controllers\AiFilesController;
 use App\Http\Controllers\AllFilesController;
+use App\Http\Controllers\AiProfileController;
 use App\Services\StripeService;
 use Illuminate\Support\Facades\Artisan;
 
@@ -94,6 +95,8 @@ use Illuminate\Support\Facades\Artisan;
 |--------------------------------------------------------------------------
 |
 */
+Route::get('/aiprofile', [AiProfileController::class, 'index'])->name('user.aiprofile');
+
 
 
 Route::get('/aifiles/index', [AiFilesController::class, 'index'])->name('user.aifiles');
